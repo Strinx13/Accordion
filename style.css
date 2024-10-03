@@ -1,0 +1,80 @@
+ /* Estilos generales */
+ body {
+    font-family: Arial, sans-serif;
+    background-color: #1b1b1b;
+    color: #fff;
+  }
+
+  h1,
+  h2 {
+    width: 80%;
+    margin-top: 40px;
+    margin-left: 0px;
+    /* Alineación horizontal con el acordeón */
+    margin-right: 0px;
+    /* Alineación horizontal con el acordeón */
+    color: #0ff;
+    text-align: center;
+    text-shadow: 0 0 10px #0ff;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    color: #f0f;
+    text-shadow: 0 0 5px #f0f;
+    margin-bottom: 20px;
+  }
+
+  .acordeon {
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  .acordeon-item {
+    margin-bottom: 10px;
+  }
+
+  .acordeon-header {
+    background-color: #282828;
+    color: #0ff;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .acordeon-header:hover {
+    background-color: #0ff;
+    color: #000;
+  }
+
+  .acordeon-contenido {
+    margin-top: 5px;
+    background-color: #121212;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #0ff;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+  }
+
+  .acordeon-contenido.mostrar {
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  .arrow {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+  }
+
+  /* Rotar flecha cuando está abierta */
+  .rotate {
+    transform: rotate(180deg);
+  }
